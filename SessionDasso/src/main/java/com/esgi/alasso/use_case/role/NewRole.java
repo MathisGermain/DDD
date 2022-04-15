@@ -13,7 +13,7 @@ public class NewRole {
     private final AssociationDao associationDao;
     private final Role role;
 
-    public void execute(Role role) {
+    public void execute() {
         roleDao.newRole(role);
     }
 

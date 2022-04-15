@@ -14,7 +14,7 @@ public class NewAssociation {
     private final UserDao userDao;
     private final Association association;
 
-    public void execute(Association association) {
+    public void execute() {
         associationDao.nouvelleAssociation(association);
     }
 

@@ -10,7 +10,7 @@ public class CreateUser {
     private final User user;
 
 
-    public void execute(User user){
+    public void execute(){
         userDao.createUser(user);
     }
 

@@ -8,6 +8,7 @@ import com.esgi.alasso.infrastructure.utilisateur.UserDao;
 import com.esgi.alasso.infrastructure.utilities.Verification;
 import com.esgi.alasso.model.paiement.Cotisation;
 import com.esgi.alasso.model.role.UserRole;
+import com.esgi.alasso.use_case.role.AttributionRole;
 
 import java.time.LocalDate;
 
@@ -23,12 +24,13 @@ public class NewCotisation {
     private final String userId;
     private final String associationId;
 
-    public void execute(Cotisation cotisation) {
+    public void execute() {
 
         cotisationDao.nouvelleCotisation(cotisation);
         String notMember = roleDao.findRoleWithAssociationAndRoleName(associationId, "notMember");
         String member = roleDao.findRoleWithAssociationAndRoleName(associationId, "member");
-        userRoleDao.nouveauUserRole();
+        AttributionRole attributionRole = new AttributionRole(userRoleDao, associationDao, member, userId);
+        attributionRole.execute();
         userRoleDao.deleteUserRole(userId, notMember);
     }
 
@@ -49,8 +51,6 @@ public class NewCotisation {
 
         cotisation = new Cotisation (associationId, userId, LocalDate.now(), LocalDate.now().plusYears(1));
 
-
-        this.cotisation = cotisation;
     }
 
 
