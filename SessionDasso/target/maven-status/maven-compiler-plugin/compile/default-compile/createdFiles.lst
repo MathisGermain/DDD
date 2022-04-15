@@ -1,0 +1,9 @@
+com\esgi\alasso\infrastructure\utilities\InvalidatedNameException.class
+com\esgi\alasso\infrastructure\association\AssociationDao.class
+com\esgi\alasso\infrastructure\utilisateur\UserDao.class
+com\esgi\alasso\model\association\Association.class
+com\esgi\alasso\model\role\UserRole.class
+com\esgi\alasso\infrastructure\association\AssociationDaoMemoryList.class
+com\esgi\alasso\infrastructure\utilisateur\UserDaoMemoryList.class
+com\esgi\alasso\model\user\User.class
+com\esgi\alasso\use_case\utilisateur\CreateUser.class
