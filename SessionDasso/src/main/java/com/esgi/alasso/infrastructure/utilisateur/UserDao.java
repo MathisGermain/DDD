@@ -9,4 +9,5 @@ public interface UserDao {
     public List<User> getUtilisateurs();
     public void deleteAll ();
     public void createUser(User user);
+    public boolean isUserExists (String id);
 }

@@ -1,5 +1,6 @@
 package com.esgi.alasso.infrastructure.utilisateur;
 
+import com.esgi.alasso.model.association.Association;
 import com.esgi.alasso.model.user.User;
 
 import java.util.ArrayList;
@@ -33,6 +34,14 @@ public class UserDaoMemoryList implements UserDao {
     @Override
     public void createUser(User user) {
         users.add(user);
+    }
+
+    @Override
+    public boolean isUserExists(String id) {
+        for (User user : users){
+            if (user.getId().equals(id)) return true;
+        }
+        return false;
     }
 
 }
