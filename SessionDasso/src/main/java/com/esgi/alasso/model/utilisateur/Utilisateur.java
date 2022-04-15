@@ -1,6 +1,6 @@
 package com.esgi.alasso.model.utilisateur;
 
-import com.esgi.alasso.model.role.User_role;
+import com.esgi.alasso.model.role.UserRole;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ public class Utilisateur {
 
     private String id;
     private String email;
-    private List<User_role> roles;
+    private List<UserRole> roles;
 
     public String getId() {
         return id;
@@ -26,11 +26,11 @@ public class Utilisateur {
         this.email = email;
     }
 
-    public List<User_role> getRoles() {
+    public List<UserRole> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<User_role> roles) {
+    public void setRoles(List<UserRole> roles) {
         this.roles = roles;
     }
 }

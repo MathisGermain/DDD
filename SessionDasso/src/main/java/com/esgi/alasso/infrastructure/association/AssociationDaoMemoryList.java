@@ -31,4 +31,10 @@ public class AssociationDaoMemoryList implements AssociationDao {
     public void deleteAll() {
 
     }
+
+    @Override
+    public void nouvelleAssociation(Association association) {
+        associations.add(association);
+
+    }
 }
