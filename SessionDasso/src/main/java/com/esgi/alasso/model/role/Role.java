@@ -31,4 +31,10 @@ public class Role {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Role(String role_id, String association_id, String name) {
+        this.association_id = association_id;
+        this.role_id = role_id;
+        this.name = name;
+    }
 }
