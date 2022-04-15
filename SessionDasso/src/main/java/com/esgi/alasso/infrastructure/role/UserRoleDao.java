@@ -10,4 +10,8 @@ public interface UserRoleDao {
     public List<UserRole> getUserRoles();
     public void deleteAll ();
     public void nouveauUserRole (UserRole userRole);
+    public boolean hasUserRole (String user, String role);
+    public void deleteUserRole (String user, String role);
+
+
 }

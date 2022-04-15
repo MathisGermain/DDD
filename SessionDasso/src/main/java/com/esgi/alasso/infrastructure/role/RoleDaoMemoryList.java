@@ -31,4 +31,12 @@ public class RoleDaoMemoryList implements RoleDao {
         roles.add(role);
 
     }
+
+    @Override
+    public String findRoleWithAssociationAndRoleName(String associationId, String name) {
+        for (Role role : roles) {
+            if (role.getAssociation_id().equals(associationId) && role.getName().equals(name)) return role.getRole_id();
+        }
+        return null;
+    }
 }

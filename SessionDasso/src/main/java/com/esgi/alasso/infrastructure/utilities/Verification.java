@@ -2,6 +2,8 @@ package com.esgi.alasso.infrastructure.utilities;
 
 
 import com.esgi.alasso.infrastructure.association.AssociationDao;
+import com.esgi.alasso.infrastructure.role.RoleDao;
+import com.esgi.alasso.infrastructure.role.UserRoleDao;
 import com.esgi.alasso.infrastructure.utilisateur.UserDao;
 
 import java.util.regex.Matcher;
@@ -28,6 +30,13 @@ public class Verification {
         Pattern pattern = Pattern.compile(regx);
         Matcher matcher = pattern.matcher(email);
         if(!matcher.matches()) throw new InvalidEmailException();
+    }
+
+
+    public static void userIsNotMember(RoleDao roleDao, UserRoleDao userRoleDao, String userId, String associationId) {
+
+        String roleId = roleDao.findRoleWithAssociationAndRoleName(associationId, "notMember");
+        if (!userRoleDao.hasUserRole(userId, roleId)) throw new UserIsNotANotMemberException ();
     }
 
 }

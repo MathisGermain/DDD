@@ -33,4 +33,21 @@ public class UserRoleDaoMemoryList implements UserRoleDao {
         userRoles.add(userRole);
 
     }
+
+    @Override
+    public boolean hasUserRole(String user, String role) {
+        for (UserRole userRole: userRoles){
+            if (userRole.getRole_id().equals(role) && userRole.getUser_id().equals(user)) return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void deleteUserRole(String user, String role) {
+        for (UserRole userRole : userRoles){
+            if (userRole.getRole_id().equals(role) && userRole.getUser_id().equals(user)) userRoles.remove(userRole);
+        }
+
+    }
+
 }
