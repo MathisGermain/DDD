@@ -2,8 +2,10 @@ package com.esgi.alasso.infrastructure.utilities;
 
 
 import com.esgi.alasso.infrastructure.association.AssociationDao;
-import com.esgi.alasso.infrastructure.role.UserRoleDao;
 import com.esgi.alasso.infrastructure.utilisateur.UserDao;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static java.util.Objects.isNull;
 
@@ -21,13 +23,11 @@ public class Verification {
         if (isNull(id) || id.isEmpty() || !userDao.isUserExists(id)) throw new UserNotExistsException();
     }
 
-    public static void userAllreadyMember(UserRoleDao userRoleDao, String userId, String associationId) {
-
+    public static void email (String email){
+        String regx = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+        Pattern pattern = Pattern.compile(regx);
+        Matcher matcher = pattern.matcher(email);
+        if(!matcher.matches()) throw new InvalidEmailException();
     }
-
-    public static void userIsNotMember (UserRoleDao userRoleDao, String userId, String associationId) {
-
-    }
-        
 
 }
