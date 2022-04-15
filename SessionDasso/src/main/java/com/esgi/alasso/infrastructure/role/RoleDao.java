@@ -10,4 +10,6 @@ public interface RoleDao {
     public List<Role> getRoles();
     public void deleteAll ();
     public void newRole (Role role);
+
+
 }
