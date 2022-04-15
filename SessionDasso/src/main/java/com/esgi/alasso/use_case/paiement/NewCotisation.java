@@ -24,7 +24,7 @@ public class NewCotisation {
     private final String userId;
     private final String associationId;
 
-    public void execute() {
+    public Cotisation execute() {
 
         cotisationDao.nouvelleCotisation(cotisation);
         String notMember = roleDao.findRoleWithAssociationAndRoleName(associationId, "notMember");
@@ -32,6 +32,7 @@ public class NewCotisation {
         AttributionRole attributionRole = new AttributionRole(userRoleDao, associationDao, member, userId);
         attributionRole.execute();
         userRoleDao.deleteUserRole(userId, notMember);
+        return cotisation;
     }
 
     public NewCotisation(String associationId, String userId, CotisationDao cotisationDao, UserRoleDao userRoleDao, AssociationDao associationDao, UserDao userDao, RoleDao roleDao) {

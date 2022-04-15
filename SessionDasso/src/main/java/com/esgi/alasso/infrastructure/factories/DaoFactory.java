@@ -15,7 +15,7 @@ public class DaoFactory {
 
     public static AssociationDao getAssociationDao() { return AssociationDaoMemoryList.getInstance(); }
 
-    public static CotisationDao getOrderDao() {
+    public static CotisationDao getCotisationDao() {
         return CotisationDaoMemoryList.getInstance();
     }
 
@@ -24,6 +24,6 @@ public class DaoFactory {
     }
 
     public static RoleDao getRoleDao() {return RoleDaoMemoryList.getInstance();}
-    public static UserRoleDao getUserRoleDao() {return UserRoleDaoMemoryList.getInstance();}
-    }
+    public static UserRoleDao getUserRoleDao() {return UserRoleDaoMemoryList.getInstance(); }
+
 }

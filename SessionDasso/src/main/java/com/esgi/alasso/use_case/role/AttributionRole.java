@@ -14,8 +14,9 @@ public class AttributionRole {
     private final UserRoleDao userRoleDao;
     private final UserRole userRole;
 
-    public void execute(){
+    public UserRole execute(){
         userRoleDao.nouveauUserRole(userRole);
+        return userRole;
     }
 
     public AttributionRole(UserRoleDao userRoleDao, AssociationDao associationDao, String roleId, String userId) {
