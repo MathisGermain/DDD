@@ -2,18 +2,11 @@ package com.esgi.alasso.model.role;
 
 public class Role {
 
-    private String user_id;
+
     private String association_id;
     private String role_id;
     private String name;
 
-    public String getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
-    }
 
     public String getAssociation_id() {
         return association_id;

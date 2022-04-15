@@ -1,8 +1,8 @@
-package com.esgi.alasso.model.adhesion;
+package com.esgi.alasso.model.paiement;
 
 import java.util.Date;
 
-public class Adhesion {
+public class Cotisation {
 
     private String association_id;
     private String user_id;
