@@ -8,5 +8,6 @@ import java.util.List;
 public interface AssociationDao {
     public List<Association> getAssociations();
     public void deleteAll ();
+    public void nouvelleAssociation(Association association);
 
 }

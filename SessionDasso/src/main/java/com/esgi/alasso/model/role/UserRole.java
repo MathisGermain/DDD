@@ -1,6 +1,6 @@
 package com.esgi.alasso.model.role;
 
-public class User_role {
+public class UserRole {
 
     private String role_id;
     private String user_id;

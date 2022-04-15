@@ -27,7 +27,7 @@ public class RoleDaoMemoryList implements RoleDao {
     }
 
     @Override
-    public void nouveauRole(Role role) {
+    public void newRole(Role role) {
         roles.add(role);
 
     }
