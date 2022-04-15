@@ -1,4 +1,4 @@
-package com.esgi.alasso.infrastructure.utilities;
+package com.esgi.alasso.model.association;
 
 public class AssociationNotExistsException extends RuntimeException{
 }

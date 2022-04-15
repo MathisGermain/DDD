@@ -4,8 +4,11 @@ package com.esgi.alasso.use_case.role;
 import com.esgi.alasso.infrastructure.association.AssociationDao;
 import com.esgi.alasso.infrastructure.factories.CreateUUID;
 import com.esgi.alasso.infrastructure.role.RoleDao;
-import com.esgi.alasso.infrastructure.utilities.Verification;
+import com.esgi.alasso.model.verification.Verification;
 import com.esgi.alasso.model.role.Role;
+import com.esgi.alasso.model.association.AssociationNotExistsException;
+
+import static java.util.Objects.isNull;
 
 
 public class NewRole {
@@ -23,7 +26,7 @@ public class NewRole {
         this.associationDao = associationDao;
 
         Verification.name(name);
-        Verification.existAssociation(this.associationDao, associationId);
+        if (isNull(associationId) || associationId.isEmpty() || !associationDao.isAssociationExists(associationId)) throw new AssociationNotExistsException();
         String id = CreateUUID.execute();
 
         this.role = new Role (id, associationId, name);

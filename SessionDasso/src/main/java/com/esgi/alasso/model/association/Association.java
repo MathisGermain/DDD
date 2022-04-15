@@ -1,5 +1,7 @@
 package com.esgi.alasso.model.association;
 
+import static java.util.Objects.isNull;
+
 public class Association {
 
     private String id;

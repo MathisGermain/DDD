@@ -2,7 +2,7 @@ package com.esgi.alasso.use_case.utilisateur;
 
 import com.esgi.alasso.infrastructure.factories.CreateUUID;
 import com.esgi.alasso.infrastructure.utilisateur.UserDao;
-import com.esgi.alasso.infrastructure.utilities.Verification;
+import com.esgi.alasso.model.verification.Verification;
 import com.esgi.alasso.model.user.User;
 
 public class CreateUser {

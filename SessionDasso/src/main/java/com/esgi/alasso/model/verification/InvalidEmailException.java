@@ -1,4 +1,4 @@
-package com.esgi.alasso.infrastructure.utilities;
+package com.esgi.alasso.model.verification;
 
 public class InvalidEmailException extends RuntimeException{
 }
