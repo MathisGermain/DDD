@@ -1,24 +1,27 @@
 package com.esgi.alasso.use_case.role;
 
+import com.esgi.alasso.infrastructure.association.AssociationDao;
+import com.esgi.alasso.infrastructure.factories.CreateUUID;
+import com.esgi.alasso.infrastructure.role.RoleDao;
+import com.esgi.alasso.infrastructure.utilities.Verification;
 import com.esgi.alasso.model.role.Role;
 
 public class AttributionRole {
 
-    public void giveARole(String user_id,String role_id,String association_id){
+    private final RoleDao roleDao;
+    private final Role role;
 
-//        if(checkUserExist(user_id) && checkRoleExist(role_id) && checkAssociationExist(association_id)){
-//
-//            Role role = new Role();
-//            role.setRole_id(role_id);
-//            role.setUser_id(user_id);
-//            role.setAssociation_id(association_id);
-//            // role.setName();
-//
-//        }
+    public AttributionRole(RoleDao roleDao, AssociationDao associationDao, String association_id, String name) {
+
+
+        this.roleDao = roleDao;
+        Verification.name(name);
+        Verification.existAssociation(associationDao,association_id);
+
+        String id = CreateUUID.execute();
+
+        this.role = new Role(id,association_id,name);
 
 
     }
-
-
-
 }
