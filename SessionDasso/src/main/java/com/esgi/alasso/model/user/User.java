@@ -12,7 +12,8 @@ public class User {
     private String firstname;
     private List<UserRole> roles;
 
-    public User(String email, String name, String firstname) {
+    public User(String id, String email, String name, String firstname) {
+        this.id = id;
         this.email = email;
         this.name = name;
         this.firstname = firstname;

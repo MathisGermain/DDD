@@ -13,8 +13,9 @@ public class NewRole {
     private final AssociationDao associationDao;
     private final Role role;
 
-    public void execute() {
+    public Role execute() {
         roleDao.newRole(role);
+        return role;
     }
 
     public NewRole(String name, String associationId, RoleDao roleDao, AssociationDao associationDao) {

@@ -14,8 +14,9 @@ public class NewAssociation {
     private final UserDao userDao;
     private final Association association;
 
-    public void execute() {
+    public Association execute() {
         associationDao.nouvelleAssociation(association);
+        return association;
     }
 
     public NewAssociation(String name, String ownerId, AssociationDao associationDao, UserDao userDao) {

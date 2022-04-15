@@ -13,7 +13,7 @@ public class UserRoleDaoMemoryList implements UserRoleDao {
 
     }
 
-    public UserRoleDaoMemoryList GetInstance(){
+    public static UserRoleDaoMemoryList getInstance(){
         if (INSTANCE == null) INSTANCE = new UserRoleDaoMemoryList();
         return INSTANCE;
     }
