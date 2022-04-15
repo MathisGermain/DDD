@@ -34,6 +34,8 @@ public class NewCotisationTest {
         CreateUser createUser2 = new CreateUser(userDao,"toto@gmail.com","tata","Yoyo");
         User user = createUser2.execute();
 
+        
+
 
 
     }
