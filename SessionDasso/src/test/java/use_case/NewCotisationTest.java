@@ -44,8 +44,6 @@ public class NewCotisationTest {
         UserRole userRole = attributionRole.execute();
 
         NewCotisation newCotisation = new NewCotisation(association.getId(), user.getId(), cotisationDao, userRoleDao, associationDao, userDao, roleDao);
-        
-
 
 
 

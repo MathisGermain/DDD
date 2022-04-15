@@ -2,6 +2,7 @@ package com.esgi.alasso.model.paiement;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Objects;
 
 public class Cotisation {
 
@@ -49,4 +50,26 @@ public class Cotisation {
         this.date_fin = date_fin;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cotisation that = (Cotisation) o;
+        return Objects.equals(association_id, that.association_id) && Objects.equals(user_id, that.user_id) && Objects.equals(date_adhesion, that.date_adhesion) && Objects.equals(date_fin, that.date_fin);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(association_id, user_id, date_adhesion, date_fin);
+    }
+
+    @Override
+    public String toString() {
+        return "Cotisation{" +
+                "association_id='" + association_id + '\'' +
+                ", user_id='" + user_id + '\'' +
+                ", date_adhesion=" + date_adhesion +
+                ", date_fin=" + date_fin +
+                '}';
+    }
 }
