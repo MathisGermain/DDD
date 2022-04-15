@@ -1,10 +1,10 @@
-package com.esgi.alasso.model.utilisateur;
+package com.esgi.alasso.model.user;
 
 import com.esgi.alasso.model.role.User_role;
 
 import java.util.List;
 
-public class Utilisateur {
+public class User {
 
     private String id;
     private String email;

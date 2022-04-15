@@ -6,8 +6,8 @@ import com.esgi.alasso.infrastructure.paiement.CotisationDao;
 import com.esgi.alasso.infrastructure.paiement.CotisationDaoMemoryList;
 import com.esgi.alasso.infrastructure.role.RoleDao;
 import com.esgi.alasso.infrastructure.role.RoleDaoMemoryList;
-import com.esgi.alasso.infrastructure.utilisateur.UtilisateurDao;
-import com.esgi.alasso.infrastructure.utilisateur.UtilisateurDaoMemoryList;
+import com.esgi.alasso.infrastructure.utilisateur.UserDao;
+import com.esgi.alasso.infrastructure.utilisateur.UserDaoMemoryList;
 
 public class DaoFactory {
 
@@ -17,8 +17,8 @@ public class DaoFactory {
         return CotisationDaoMemoryList.getInstance();
     }
 
-    public static UtilisateurDao getUserDao() {
-        return UtilisateurDaoMemoryList.getInstance();
+    public static UserDao getUserDao() {
+        return UserDaoMemoryList.getInstance();
     }
 
     public static RoleDao getRoleDao() {return RoleDaoMemoryList.getInstance();}
