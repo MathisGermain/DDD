@@ -10,7 +10,7 @@ public class CreateUser {
 
 
     public void execute(User user){
-        UserDao.createUser(user);
+        userDao.createUser(user);
     }
 
     public CreateUser(UserDao userDao, User user) {
