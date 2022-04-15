@@ -12,4 +12,5 @@ public interface RoleDao {
     public void newRole (Role role);
     public String findRoleWithAssociationAndRoleName (String associationId, String name);
 
+
 }
