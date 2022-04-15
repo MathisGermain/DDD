@@ -9,5 +9,6 @@ public interface AssociationDao {
     public List<Association> getAssociations();
     public void deleteAll ();
     public void nouvelleAssociation(Association association);
+    public boolean isAssociationExists (String id);
 
 }

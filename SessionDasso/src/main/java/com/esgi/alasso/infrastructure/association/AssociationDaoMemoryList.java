@@ -37,4 +37,12 @@ public class AssociationDaoMemoryList implements AssociationDao {
         associations.add(association);
 
     }
+
+    @Override
+    public boolean isAssociationExists(String id) {
+        for (Association association : associations){
+            if (association.getId().equals(id)) return true;
+        }
+        return false;
+    }
 }

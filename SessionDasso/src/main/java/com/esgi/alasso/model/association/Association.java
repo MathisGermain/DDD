@@ -5,7 +5,7 @@ public class Association {
     private String id;
     private String name;
     private String owner_id;
-    private String descriptif;
+
 
     public String getId() {
         return id;
@@ -31,11 +31,9 @@ public class Association {
         this.owner_id = owner_id;
     }
 
-    public String getDescriptif() {
-        return descriptif;
-    }
-
-    public void setDescriptif(String descriptif) {
-        this.descriptif = descriptif;
+    public Association(String id, String name, String owner_id) {
+        this.id = id;
+        this.name = name;
+        this.owner_id = owner_id;
     }
 }
